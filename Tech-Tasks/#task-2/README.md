@@ -1,1 +1,578 @@
+CODE:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-2</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald|Monserrat">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Montserrat", sans-serif;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #303030;
+            height: 87px;
+            padding: 0 20px;
+        }
+        nav img.logoicon {
+            height: 70px;
+            margin-left: 5%;
+        }
+        nav img.searchicon {
+            height: 24px;
+            margin-right: 3%;
+        }
+        nav ul {
+            display: flex;
+            list-style-type: none;
+            justify-content: space-between;
+        }
+        nav ul li {
+            color: #FFFFFF;
+            font-size: 24px;
+            font-family: "Oswald", sans-serif;
+            padding: 14px;
+        }
+        nav ul li[opacity="0"] {
+            opacity: 0;
+        }
+        .div1 {
+            background-image: url(1.png);
+            height: 590px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+        }
+        .content1 {
+            z-index: 1;
+            margin-left: 5%;
+            display: flex;
+            flex-direction: column;
+        }
+        .content1 h1 {
+            margin-top: 20%;
+            font-size: 110px;
+            color: white;
+            margin-bottom: 15px;
+            font-weight: normal;
+            font-family: "Oswald", sans-serif;
+        }
+        .content1 span {
+            font-size: 24px;
+            width: 45%;
+            color: white;
+            margin-bottom: 15px;
+        }
+        .content1 button {
+            background-color: #e8631c;
+            color: white;
+            border: none;
+            width: 260px;
+            padding: 10px;
+            font-size: 18px;
+            font-family: "Oswald", sans-serif;
+            cursor: pointer;
+        }
+        .div2 {
+            background-color: #e8631c;
+            height: 800px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .content2 {
+            z-index: 1;
+            align-items: center;
+        }
+        .columnflex {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .content2 h1 {
+            margin-top: 0%;
+            font-size: 60px;
+            color: white;
+            font-family: "Oswald", sans-serif;
+            font-weight: bold;
+        }
+        .content2 span {
+            font-size: 24px;
+            width: 55%;
+            color: white;
+            margin-bottom: 15px;
+        }
+        .imgdiv {
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0;
+        }
+        .imgdiv img {
+            height: 320px;
+            width: 280px;
+        }
+        .boxdiv {
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 0;
+        }
+        .boxdiv box {
+            background-color: #303030;
+            height: 120px;
+            width: 280px;
+            justify-content: center;
+        }
+        .boxdiv box h3 {
+            color: white;
+            font-family: "Oswald", sans-serif;
+            font-size: 30px;     
+            font-weight: normal;
+            margin-left: 50px;    
+            margin-top: 10px;   
+        }
+        .boxdiv box span{
+            color: white;
+            margin-left: 14px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 20px;
+            font-weight: lighter;  
+        }
+        .div3 {
+            background-color: #303030;
+            height: 800px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .content3 {
+            z-index: 1;
+            align-items: center;
+        }
+        .content3 h1 {
+            margin-top: 0%;
+            font-size: 60px;
+            color: white;
+            font-family: "Oswald", sans-serif;
+            font-weight: bold;
+        }
+        .content3 span {
+            font-size: 24px;
+            width: 55%;
+            color: white;
+            margin-bottom: 15px;
+        }
+        .sectiondiv {
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0;
+        }
+        .sectiondiv box {
+            height: 400px;
+            width: 280px;
+            background-color: #e8631c;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 5px;
+        }
+        .sectiondiv box img {
+            margin-top: 20px;
+        }
+        .sectiondiv box h3 {
+            color: white;
+            font-family: "Oswald", sans-serif;
+            font-size: 30px;     
+            font-weight: bold;
+               
+            margin-top: 10px;   
+        }
+        .sectiondiv box span{
+            color: white;
+            width: 200px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 20px;
+            font-weight: lighter;  
+        }
+        .sectiondiv box button{
+            background-color: #303030;
+            color: white;
+            border: none;
+            width: 260px;
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 18px;
+            font-family: "Oswald", sans-serif;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        .lrdiv {
+            height: 700px;
+            display: flex;
+        }
+        .leftdiv {
+            width: 50%;
+            background-image: url(3.png);
+            background-size: cover;
+            background-position: center;
+        }
+        .rightdiv2 {
+            width: 50%;
+            background-image: url(4.png);
+            background-size: cover;
+            background-position: center;
+        }
+        .rightdiv {
+            width: 50%;
+            background-color: #e8631c;
+        }
+        .rcontent {
+            z-index: 1;
+            margin-left: 15%;
 
+        }
+        .rcontent h1 {
+            margin-top: 60%;
+            font-size: 60px;
+            color: white;
+            font-family: "Oswald", sans-serif;
+            font-weight: bold;
+        }
+        .rcontent span {
+            font-size: 24px;
+            width: 20%;
+            color: white;
+        }
+        .rcontent button {
+            background-color: #303030;
+            color: white;
+            border: none;
+            width: 260px;
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 18px;
+            font-family: "Oswald", sans-serif;
+            cursor: pointer;
+            border-radius: 3px; 
+        }
+        .div4 {
+            background-color: #303030;
+            width: 100%;
+            height: 700px;
+        }
+        .content4a {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+        .content4a h2{
+            font-size: 65px;
+            font-weight: bold;
+            color: white;
+            margin-top: 11%;
+            
+        }
+        .content4a span {
+            font-size: 24px;
+            letter-spacing: 1px;
+            color: white;
+            font-weight: 300;
+        }
+        .content4b {
+            display: flex;
+            flex-direction: row;
+        }
+        .content4b div{
+            width: 33%;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+        .content4b div h1 {
+            font-family: "Oswald", sans-serif;
+            font-weight: bold;
+            color: white;
+            font-size: 60px;
+        }
+        .content4b div span {
+            font-size: 30px;
+            color: white;
+        }
+        .div5 {
+            position: relative;
+            background-image: url(4.png);
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 850px;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(219, 81, 12, 0.493);
+}
+        .content5 {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            margin: 0 15%;
+        }
+        .content5 h2 {
+            z-index: 1;
+            color: white;
+            font-family: "Oswald", sans-serif;
+            font-size: 60px;
+        }
+        .content5 span {
+            z-index: 1;
+            color: white;
+            font-size: 36px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            width: 87%;
+            align-items: center;
+        }
+        .div6 {
+            background-color: #e8631c;
+            width: 100%;
+            height: 490px;
+        }
+        .content6 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .content6 h2 {
+            color: white;
+            font-size: 60px;
+            font-family: "Oswald", sans-serif;
+        }
+        .content6 span {
+            color: white;
+            font-size: 28px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin: 0 17.5%;
+            width: 65%;
+        }
+        .content6 input{
+            background-color: white;
+            border-radius: 3px 0 0 3px;
+            height: 55px;
+            margin-top: 5%;
+            border: none;
+            padding-left: 20px;
+            width: 500px;
+        }
+        .content6 button {
+            background-color: #303030;
+            border-radius: 0 3px 3px 0;
+            color: white;
+            height: 55px;
+            border: none;
+            width: 170px;
+        }
+        .div7 {
+            background-color: #303030;
+            width: 100%;
+            height: 420px;
+        }
+        .content7 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .content7 div {
+            margin-left: 0;
+            color: white;
+            padding: 43px;
+        }
+        .content7 div h2 {
+            font-size: 34px;
+            font-weight: 500;
+            font-family: "Oswald", sans-serif;
+        }
+        .content7 div span {
+            word-wrap: break-word;
+            font-size: 22px;
+            font-weight: 200;
+            letter-spacing: 1px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img class="logoicon" src="6.png" alt="">
+        <ul>
+            <li opacity="0"></li>
+            <li>HOME</li>
+            <li>PRODUCT</li>
+            <li>PROMO</li>
+            <li>ABOUT</li>
+            <li>CONTACT</li>
+            <li opacity="0"></li>
+        </ul>
+        <img class="searchicon" src="7.png" alt="">
+    </nav>
+    <div class="div1">
+        <div class="content1">
+            <h1>Title Here</h1>
+            <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit.  Nobis reiciendis commodi facilis deserunt eligendi.</span>
+            <br>
+            <button>REGISTER NOW</button>
+        </div>
+    </div>
+    <div class="div2">
+        <div class="content2">
+            <div class="columnflex">
+                <h1>DANCE TOUR</h1>
+                <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Labore eum perspiciatis officiis minima quis.</span>
+            </div>
+            <br>
+            <div class="imgdiv">
+                <img src="2.png" alt="">
+                <img src="3.png" alt="">
+                <img src="4.png" alt="">
+            </div>
+            <div class="boxdiv">
+                <box><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AMERICA</h3><span>Lorem ipsum dolor sit amet &nbsp;&nbsp;&nbsp;&nbsp consectetur adipisicing.</span></box>
+                <box><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ASIA</h3><span>Lorem ipsum dolor sit amet &nbsp;&nbsp;&nbsp;&nbsp; consectetur adipisicing.</span></box>
+                <box><h3>&nbsp;&nbsp;&nbsp;&nbsp;AUSTRALIA</h3><span>Lorem ipsum dolor sit amet &nbsp;&nbsp;&nbsp;&nbsp; consectetur adipisicing.</span></box>
+            </div>
+        </div>
+    </div>
+    <div class="div3">
+    <div class="content3">
+        <div class="content2">
+            <div class="columnflex">
+                <h1>PRICING</h1>
+                <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Labore eum perspiciatis officiis minima quis.</span>
+            </div> <br>
+            <div class="sectiondiv">
+                <box>
+                    <img src="5.png" alt="" height="120px" width="100px">
+                    <h3>BASIC</h3>
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                    <button>&dollar;150.00</button>
+                </box>
+                <box>
+                    <img src="5.png" alt="" height="120px" width="100px">
+                    <h3>PROFESSIONAL</h3>
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                    <button>&dollar;200.00</button>
+                </box>
+                <box>
+                    <img src="5.png" alt="" height="120px" width="100px">
+                    <h3>ULTIMATE</h3>
+                    <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</span>
+                    <button>&dollar;250.00</button>
+                </box>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="lrdiv">
+        <div class="leftdiv">
+        </div>
+        <div class="rightdiv">
+            <div class="rcontent">
+                <h1>AMAZING DANCE</h1> <br> <br>
+                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, asperiores eius? Cum, placeat facere!</span>
+                <br> <br> <br>
+                <button>READ MORE</button>
+            </div>
+        </div>
+    </div>
+    <div class="lrdiv">
+        <div class="rightdiv">
+            <div class="rcontent">
+                <h1>BEST DANCE</h1> <br> <br>
+                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, asperiores eius? Cum, placeat facere!</span>
+                <br> <br> <br>
+                <button>READ MORE</button>
+            </div>
+        </div>
+        <div class="rightdiv2">
+        </div>
+    </div>
+    <div class="div4">
+        <div class="content4a">
+            <h2>OUR STATISTICS</h2> <br>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta </span><span> nostrum a aspernatur. Maxime, praesentium?</span>
+        </div>
+        <br> <br><br><br>
+        <div class="content4b">
+            <div>
+                <h1>1240+</h1>
+                <span>Club</span>
+            </div>
+            <div>
+                <h1>2000+</h1>
+                <span>Active Member</span>
+            </div>
+            <div>
+                <h1>1000+</h1>
+                <span>Community</span>
+            </div>
+        </div>
+    </div>
+    <div class="div5"> <div class="overlay"></div>
+        <div class="content5">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <span>Lorem, ipsum dolor sit amet consectetur  </span><span>adipisicing elit. In quod molestias eius </span><span> facere ipsa?</span>
+            <br> <br>
+            <h2>HERBERT SIMON</h2>
+        </div>
+    </div>
+    <div class="div6">
+        <div class="content6"> <br><br><br><br><br>
+            <h2>SUBSCRIBE</h2> <br>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Akin laborum quas accusantium corporis ipsanil libero?</span> <br>
+            <div><input type="text" placeholder="Your Email"><button>SUBSCRIBE</button></div>
+        </div>
+    </div>
+    <div class="div7">
+        <div class="content7">
+            <div> <br><br>
+                <h2>MUSICOLOGY</h2>
+                <span> <br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id eum in similique voluptas explicabo tempora cum nostrum laboriosam, nesciunt illo nam ipsum? <br><br></span>
+                <img src="11.png" alt="">
+                <img src="10.png" alt="">
+                <img src="9.png" alt="">
+                <img src="8.png" alt="">
+            </div>
+            <div> <br><br>
+                <h2>ABOUT</h2>
+                <span><br> History <br> Our Team <br> Brand Guidlines <br> Terms&Conditions <br> Privacy Policy</span>
+            </div>
+            <div> <br><br>
+                <h2>SERVICES</h2>
+                <span> <br> How to Ordr<br> Our Product <br> Order Status <br> Promo <br> Payment Method</span>
+            </div>
+            <div> <br><br>
+                <h2>OTHER</h2>
+                <span> <br> Contact Us <br> Help <br> Privacy</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
