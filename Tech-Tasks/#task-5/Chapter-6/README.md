@@ -7,7 +7,7 @@ CHAPTER 6:- <br />
 •	You can use triple-quoted strings (''' or """) to write strings with newlines in them. <br />
 •	Expression evaluations: <br />
 •	'Hello, world!'[1] -> 'e' <br />
-o	'Hello, world!'[0:5] -> 'Hello' <br />
+•	'Hello, world!'[0:5] -> 'Hello' <br />
 •	'Hello, world!'[:5] -> 'Hello' <br />
 •	'Hello, world!'[3:] -> 'lo, world!' <br />
 •	Expression evaluations: <br />
