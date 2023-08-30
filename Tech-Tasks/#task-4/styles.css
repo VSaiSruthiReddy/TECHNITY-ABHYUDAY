@@ -1,0 +1,85 @@
+@import url(https://db.onlinewebfonts.com/c/4b1e5be01e67b5fc82df33f738e0dfb3?family=Courgette);
+@import url(https://db.onlinewebfonts.com/c/696041d117e6f6ef7f57d9e47b5fffe6?family=Rancho);
+
+body {
+  text-align: center;
+  background-color: #0D1B2A;
+}
+
+h1 {
+  font-size: 6rem;
+  color: #F4A261;
+  font-family: 'Courgette', cursive;
+  margin-top: 3rem;
+}
+
+.drum {
+  border: 3px solid #E76F51;
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.4);
+  font-size: 3rem;
+  font-weight: 400;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  text-align: center;
+  margin: 1rem;
+  font-family: "Rancho", cursive;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.w {
+  background-color: #06D6A0;
+  color: #2A9D8F;
+  text-shadow: 1px 1px 1px #045D56;
+}
+
+.a {
+  background-color: #EF476F;
+  color: #F4A261;
+  text-shadow: 1px 1px 1px #D23F58;
+}
+
+.s {
+  background-color: #FFD166;
+  color: #06D6A0;
+  text-shadow: 1px 1px 1px #FFB03B;
+}
+
+.d {
+  background-color: #118AB2;
+  color: #EF476F;
+  text-shadow: 1px 1px 1px #0B3948;
+}
+
+.j {
+  background-color: #073B4C;
+  color: #F4A261;
+  text-shadow: 1px 1px 1px #010D1C;
+}
+
+.k {
+  background-color: #20639B;
+  color: #FFD166;
+  text-shadow: 1px 1px 1px #172A3A;
+}
+
+.l {
+  background-color: #3CAEA3;
+  color: #118AB2;
+  text-shadow: 1px 1px 1px #2B7A78;
+}
+
+.set {
+  margin: 10% auto;
+}
+
+.drum:active {
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+  opacity: 0.9;
+  transform: translate(2px, 2px);
+  text-shadow: none;
+}
