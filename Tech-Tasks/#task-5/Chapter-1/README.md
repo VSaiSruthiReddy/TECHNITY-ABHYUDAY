@@ -1,6 +1,6 @@
-CHAPTER 1: -
-
-•	Operators: *, -, /, + Values: 'hello', -88.8, 5
+CHAPTER 1: - <br />
+<br />
+•	Operators: *, -, /, + Values: 'hello', -88.8, 5 
 •	Variable: spam String: 'spam'
 •	Three data types: Integer, Float, String
 •	An expression is made up of operators and values that can be evaluated to produce a result. All expressions return a value.
