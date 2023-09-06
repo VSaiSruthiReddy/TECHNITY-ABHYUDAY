@@ -1,5 +1,5 @@
 1. Introduction about yourself? (previous experiences and achievements if any) <br/>
-Hey! I'm Sruthi Reddy. 
+Hey! I'm Sruthi Reddy.  <br />
 <br/>
 2. What is your plan for the next 6 months? 📜 <br/>
 Learn! Learn! Learn! <br/>
